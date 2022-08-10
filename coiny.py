@@ -1,7 +1,21 @@
 #!/usr/bin/env python3
+'''coiny - scrapes Market Data from deribit.com
 
-def main():
-    print('coiny v0.0.1')
+Usage:
+    coiny.py --version
+
+'''
+
+import docopt
+
+
+__version__ = '0.0.1'
+
+def main(args):
+    print(f'coiny v{__version__}')
+    print(f'args = {args}')
+
 
 if __name__ == '__main__':
-    main()
+    args = docopt.docopt(__doc__, version=__version__)
+    main(args)
